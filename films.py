@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 
 # Carregar o arquivo CSV
-df = pd.read_csv('LetterboxdAllFilms.csv.zip')
+df = pd.read_csv('LetterboxdAllFilms.csv')
 
 # Obter os IDs dos 10 filmes mais assistidos atualmente
 top_10_ids = df['ID'].value_counts().head(10).index.tolist()
