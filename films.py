@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+import streamlit as st
  
 # Carregar o arquivo CSV
 df = pd.read_csv('ordenado.csv')
