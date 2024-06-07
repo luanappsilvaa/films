@@ -5,7 +5,7 @@ import requests
 df = pd.read_csv('ordenado.csv')
 
 # Ordenar o DataFrame pelos ratings em ordem decrescente
-df_sorted = df.sort_values(by='Rating', ascending=False)
+df_sorted = df.sort_values(by='averageRating', ascending=False)
 
 # Obter os IDs dos 10 filmes melhor classificados
 top_10_ids = df_sorted['ID'].head(10).tolist()
