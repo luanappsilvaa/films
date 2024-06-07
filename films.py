@@ -4,7 +4,6 @@ import requests
 # Carregar o arquivo CSV
 df = pd.read_csv('ordenado.csv')
  
-# Obter os IDs dos 10 filmes mais assistidos atualmente
 top_10_ids = df['ID'].value_counts().head(10).index.tolist()
  
 # Função para obter informações de um filme pelo ID
@@ -17,10 +16,8 @@ def get_movie_info(movie_id):
     else:
         return None
  
-# Lista para armazenar informações dos 10 filmes mais assistidos
 top_10_movies_info = []
  
-# Obter informações dos 10 filmes mais assistidos
 for movie_id in top_10_ids:
     movie_info = get_movie_info(movie_id)
     if movie_info:
