@@ -18,8 +18,9 @@ def get_movie_info(movie_id):
         return None
 
 df = pd.read_csv('country.csv')
-pais=st.selectbox("países", df ['country']) 
-st.write(df.query(f"country==`{pais}`").head(10))
+pais=st.selectbox("países", df ['country'])
+query=f"country==`{pais}`"
+st.write(df.query(query).head(10))
 
 
  
