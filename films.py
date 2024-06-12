@@ -21,7 +21,7 @@ df = pd.read_csv('country.csv')
 pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
 
-df = pd.read_csv('genre.csv')
-genero=st.selectbox("gêneros", df ['genre'])
-st.write(df[df['genre'] == genero])
+df = pd.read_csv('language1.csv')
+lingua=st.selectbox("línguas", df ['language'])
+st.write(df[df['language'] == lingua])
  
