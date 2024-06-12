@@ -20,4 +20,8 @@ def get_movie_info(movie_id):
 df = pd.read_csv('country.csv')
 pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
+
+df = pd.read_csv('genre.csv')
+genero=st.selectbox("gêneros", df ['genre'])
+st.write(df[df['genre'] == genero])
  
