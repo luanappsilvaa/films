@@ -21,7 +21,3 @@ df = pd.read_csv('country.csv')
 pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
 
-df = pd.read_csv('language1.csv')
-lingua=st.selectbox("línguas", df ['language1'])
-st.write(df[df['language1'] == lingua])
- 
