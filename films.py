@@ -18,7 +18,7 @@ df = pd.read_csv('country.csv')
 pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
 
-filtered_movies = df_movies[df_movies['country'] == selected_country]
+filtered_movies = df[df['country'] == selected_country]
 
 # Display filtered movies
 st.write(filtered_movies)
