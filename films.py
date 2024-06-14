@@ -16,11 +16,14 @@ def get_movie_info(movie_id):
     else:
         return None
  
-df_country = pd.read_csv('country.csv')
-pais=st.selectbox("países", df ['country'])
-st.write(df[df['country'] == pais])
+#df_country = pd.read_csv('country.csv')
+#pais=st.selectbox("países", df ['country'])
+#st.write(df[df['country'] == pais])
 
 pais = st.selectbox("Países", df_country['country'].unique())
+genero = st.selectbox("Gênero", df_country['genre.1'].unique())
+
+
 
 # Filtrar os dados pelo país selecionado
 filmes_por_pais = df[df['country'] == pais]
