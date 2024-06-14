@@ -20,8 +20,8 @@ def get_movie_info(movie_id):
 #pais=st.selectbox("países", df ['country'])
 #st.write(df[df['country'] == pais])
 
-pais = st.selectbox("Países", df_country['country'].unique())
-genero = st.selectbox("Gênero", df_country['genre.1'].unique())
+pais = st.selectbox("Países", df['country'].unique())
+genero = st.selectbox("Gênero", df['genre.1'].unique())
 
 
 
