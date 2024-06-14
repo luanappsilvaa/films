@@ -22,7 +22,7 @@ def get_movie_info(movie_id):
 
 pais = st.selectbox("Países", df['country'].unique())
 genero = st.selectbox("Gênero",df.sort_values(by='genre.1')['genre.1'].unique())
-
+lingua = st.selectbox("Língua ",df.sort_values(by='language.1')['language.1'].unique())
 
 
 # Filtrar os dados pelo país selecionado
