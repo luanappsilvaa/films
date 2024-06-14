@@ -21,7 +21,7 @@ pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
 
 pais = st.selectbox("Países", df_country['country'].unique())
-st.write(df_paises[df_country['country'] == pais])
+st.write(df_country[df_country['country'] == pais])
 
 # Filtrar os dados pelo país selecionado
 filmes_por_pais = df_country[df_country['country'] == pais]
