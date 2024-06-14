@@ -21,10 +21,9 @@ pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
 
 pais = st.selectbox("Países", df_country['country'].unique())
-st.write(df_country[df_country['country'] == pais])
 
 # Filtrar os dados pelo país selecionado
-filmes_por_pais = df_country[df_country['country'] == pais]
+filmes_por_pais = df[df['country'] == pais]
 
 # Contar a quantidade de filmes por categoria
 contagem_categorias = filmes_por_pais['genre.1'].value_counts()
