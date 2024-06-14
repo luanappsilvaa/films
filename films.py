@@ -24,7 +24,7 @@ filtered_movies = df_movies[df_movies['country'] == selected_country]
 st.write(filtered_movies)
 
 # Count movies per category
-category_counts = filtered_movies['genre.1'].value_counts()
+category_counts = filtered_movies['genre'].value_counts()
 
 # Plot bar chart
 plt.figure(figsize=(10, 6))
