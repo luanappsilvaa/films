@@ -17,3 +17,20 @@ def get_movie_info(movie_id):
 df = pd.read_csv('country.csv')
 pais=st.selectbox("países", df ['country'])
 st.write(df[df['country'] == pais])
+
+filtered_movies = df_movies[df_movies['country'] == selected_country]
+
+# Display filtered movies
+st.write(filtered_movies)
+
+# Count movies per category
+category_counts = filtered_movies['genre.1'].value_counts()
+
+# Plot bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(category_counts.index, category_counts.values)
+plt.xlabel('Category')
+plt.ylabel('Number of Movies')
+plt.title(f'Number of Movies per Category in {selected_country}')
+plt.xticks(rotation=45, ha='right')
+st.pyplot()
