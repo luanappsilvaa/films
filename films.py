@@ -15,28 +15,5 @@ def get_movie_info(movie_id):
         return None
  
 df = pd.read_csv('country.csv')
-selected_country = st.selectbox("Países", countries_df['country'])
-print("País selecionado:", selected_country)  # Adicionado para depuração
-
-# Verificar se o país foi selecionado
-if selected_country:
-    # Filtrar os filmes pelo país selecionado
-    filtered_movies = df[df['country'] == selected_country]
-    print("Número de filmes após filtragem:", len(filtered_movies))  # Adicionado para depuração
-
-    # Exibir os filmes filtrados
-    st.write(filtered_movies)
-
-    # Contar filmes por categoria
-    category_counts = filtered_movies['genre'].value_counts()
-
-    # Plotar o gráfico de barras
-    plt.figure(figsize=(10, 6))
-    plt.bar(category_counts.index, category_counts.values)
-    plt.xlabel('Categoria')
-    plt.ylabel('Número de Filmes')
-    plt.title(f'Número de Filmes por Categoria em {selected_country}')
-    plt.xticks(rotation=45, ha='right')
-    st.pyplot()
-else:
-    st.write("Nenhum país selecionado. Por favor, selecione um país.")
+pais=st.selectbox("países", df ['country'])
+st.write(df[df['country'] == pais])
