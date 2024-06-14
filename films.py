@@ -27,7 +27,7 @@ st.write(df_country[df_country['country'] == pais])
 filmes_por_pais = df_country[df_country['country'] == pais]
 
 # Contar a quantidade de filmes por categoria
-contagem_categorias = filmes_por_pais['genre.'].value_counts()
+contagem_categorias = filmes_por_pais['genre.1'].value_counts()
 
 # Plotar o gráfico
 st.write("Quantidade de filmes por categoria no país selecionado:")
