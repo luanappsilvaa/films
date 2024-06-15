@@ -46,13 +46,17 @@ st.pyplot(fig)
 # Novo código para exibir os 10 filmes mais bem avaliados
 st.write("Top 10 filmes mais bem avaliados:")
 
+# Exibir as colunas do DataFrame
+st.write("Colunas disponíveis no DataFrame:", df.columns.tolist())
+
 # Verificar se as colunas estão presentes no DataFrame
-required_columns = ['ID', 'title', 'five.star']
+required_columns = ['ID', 'five.star']
 missing_columns = [col for col in required_columns if col not in df.columns]
 
 if missing_columns:
     st.error(f"Erro: As seguintes colunas estão faltando no DataFrame: {', '.join(missing_columns)}")
 else:
     top_10_filmes = df.nlargest(10, 'five.star')
-    st.dataframe(top_10_filmes[['ID', 'title', 'five.star']])
+    st.dataframe(top_10_filmes[required_columns])
+
 
