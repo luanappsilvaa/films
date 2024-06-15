@@ -12,7 +12,7 @@ top_10_ids = df['ID'].value_counts().head(10).index.tolist()
 def get_movie_info(movie_id):
     url = f"https://api.letterboxd.com/api/v0/films/{movie_id}"
     response = requests.get(url)
-    if (response.status_code == 200):
+    if response.status_code == 200:
         movie_data = response.json()
         return movie_data
     else:
@@ -45,7 +45,14 @@ st.pyplot(fig)
 
 # Novo código para exibir os 10 filmes mais bem avaliados
 st.write("Top 10 filmes mais bem avaliados:")
-top_10_filmes = df.nlargest(10, 'five.star')
 
-# Exibir a tabela dos 10 filmes mais bem avaliados
-st.dataframe(top_10_filmes[['ID', 'title', 'five.star']])
+# Verificar se as colunas estão presentes no DataFrame
+required_columns = ['ID', 'title', 'five.star']
+missing_columns = [col for col in required_columns if col not in df.columns]
+
+if missing_columns:
+    st.error(f"Erro: As seguintes colunas estão faltando no DataFrame: {', '.join(missing_columns)}")
+else:
+    top_10_filmes = df.nlargest(10, 'five.star')
+    st.dataframe(top_10_filmes[['ID', 'title', 'five.star']])
+
