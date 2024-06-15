@@ -18,13 +18,10 @@ def get_movie_info(movie_id):
     else:
         return None
 
-#df_country = pd.read_csv('country.csv')
-#pais=st.selectbox("países", df ['country'])
-#st.write(df[df['country'] == pais])
-
+# Seção de seleção de filtros
 pais = st.selectbox("Países", df['country'].unique())
 genero = st.selectbox("Gênero", df.sort_values(by='genre.1')['genre.1'].unique())
-lingua = st.selectbox("Língua ", df.sort_values(by='language.1')['language.1'].unique())
+lingua = st.selectbox("Língua", df.sort_values(by='language.1')['language.1'].unique())
 
 # Filtrar os dados pelo país selecionado
 filmes_por_pais = df[df['country'] == pais]
@@ -43,20 +40,12 @@ ax.set_title('Quantidade de Filmes por Categoria')
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
-# Novo código para exibir os 10 filmes mais bem avaliados
-st.write("Top 10 filmes mais bem avaliados:")
+# Nova funcionalidade: Top 10 filmes mais bem avaliados
+st.write("Top 10 Filmes Mais Bem Avaliados")
+top_10_filmes = df.nlargest(10, 'five.star')
 
-# Exibir as colunas do DataFrame
-st.write("Colunas disponíveis no DataFrame:", df.columns.tolist())
+for index, row in top_10_filmes.iterrows():
+    st.write(f"Título: {row['title']} - Avaliação: {row['five.star']}")
 
-# Verificar se as colunas estão presentes no DataFrame
-required_columns = ['ID', 'five.star']
-missing_columns = [col for col in required_columns if col not in df.columns]
-
-if missing_columns:
-    st.error(f"Erro: As seguintes colunas estão faltando no DataFrame: {', '.join(missing_columns)}")
-else:
-    top_10_filmes = df.nlargest(10, 'five.star')
-    st.dataframe(top_10_filmes[required_columns])
 
 
