@@ -42,10 +42,6 @@ st.pyplot(fig)
 
 # Nova funcionalidade: Top 10 filmes mais bem avaliados
 st.write("Top 10 Filmes Mais Bem Avaliados")
-top_10_filmes = df.nlargest(10, 'five.star')
-
-for index, row in top_10_filmes.iterrows():
-    st.write(f"Título: {row['title']} - Avaliação: {row['five.star']}")
 
 
 
