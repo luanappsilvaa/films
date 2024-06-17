@@ -21,13 +21,12 @@ def get_movie_info(movie_id):
 # CSS para a imagem de fundo
 page_bg_img = '''
 <style>
-.stApp {
-  background-image:"sala-de-cinema-com-tela-vazia_157999-113.jpg";
-  background-size: cover;
+body {
+background-image: url("https://www.google.com/imgres?q=sala%20de%20cinema%20desenho&imgurl=https%3A%2F%2Fst3.depositphotos.com%2F6064568%2F13346%2Fv%2F450%2Fdepositphotos_133463728-stock-illustration-interior-of-a-cinema-movie.jpg&imgrefurl=https%3A%2F%2Fdepositphotos.com%2Fbr%2Fvectors%2Ffundo-cinema.html&docid=e5vyEQSTg14PRM&tbnid=bya9j7u0TlomRM&vet=12ahUKEwim7aSq_uKGAxXclJUCHRFNB0AQM3oECH4QAA..i&w=600&h=424&hcb=2&ved=2ahUKEwim7aSq_uKGAxXclJUCHRFNB0AQM3oECH4QAA");
+background-size: cover;
 }
 </style>
 '''
-
 # Inserir o CSS no Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
