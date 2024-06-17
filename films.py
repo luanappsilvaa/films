@@ -42,10 +42,9 @@ lingua = st.selectbox("Língua", df.sort_values(by='language.1')['language.1'].u
 st.write("Top 10 Filmes Mais Bem Avaliados")
 
 # Filtrar os dados pelo país selecionado
-filmes_por_pais = df[df['country'] == pais]
-df[(df['country']==pais)&(df['language.1']==lingua)&(df['genre.1']==genero)]
-filmes_por_pais=filmes_por_pais.sort_values(by='five.star').head(10)
-st.dataframe(filmes_por_pais)
+df = df[(df['country']==pais) & (df['language.1']==lingua) & (df['genre.1']==genero)]
+df=df.sort_values(by='five.star').head(10)
+st.dataframe(df)
 
 
 # Contar a quantidade de filmes por categoria
