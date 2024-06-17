@@ -41,7 +41,7 @@ lingua = st.selectbox("Língua", df.sort_values(by='language.1')['language.1'].u
 
 # Filtrar os dados pelo país selecionado
 filmes_por_pais = df[df['country'] == pais]
-df[(df['country']==pais)&(df['language.1']==language)&(df['genre']==genero)]
+df[(df['country']==pais)&(df['language.1']==lingua)&(df['genre']==genero)]
 
 # Contar a quantidade de filmes por categoria
 
