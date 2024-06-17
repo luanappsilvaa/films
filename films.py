@@ -22,7 +22,7 @@ def get_movie_info(movie_id):
 page_bg_img = '''
 <style>
 .stApp {
-  background-image: url("https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/sala-de-cinema-com-tela-vazia_157999-113.jpg");
+  background-image:"sala-de-cinema-com-tela-vazia_157999-113.jpg";
   background-size: cover;
 }
 </style>
