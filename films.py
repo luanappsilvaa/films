@@ -18,6 +18,19 @@ def get_movie_info(movie_id):
     else:
         return None
 
+# CSS para a imagem de fundo
+page_bg_img = '''
+<style>
+.stApp {
+  background-image: url("https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/sala-de-cinema-com-tela-vazia_157999-113.jpg");
+  background-size: cover;
+}
+</style>
+'''
+
+# Inserir o CSS no Streamlit
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # Inserir o nome do site
 st.title("TOP10FILMS")
 
@@ -45,4 +58,5 @@ st.pyplot(fig)
 
 # Nova funcionalidade: Top 10 filmes mais bem avaliados
 st.write("Top 10 Filmes Mais Bem Avaliados")
+
 
