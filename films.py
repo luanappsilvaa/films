@@ -45,6 +45,7 @@ st.write("Top 10 Filmes Mais Bem Avaliados")
 filmes_por_pais = df[df['country'] == pais]
 df[(df['country']==pais)&(df['language.1']==lingua)&(df['genre.1']==genero)]
 filmes_por_pais=filmes_por_pais.sort_values(by='five.star').head(10)
+st.dataframe(filmes_por_pais)
 
 
 # Contar a quantidade de filmes por categoria
