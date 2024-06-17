@@ -18,6 +18,9 @@ def get_movie_info(movie_id):
     else:
         return None
 
+# Inserir o nome do site
+st.title("Nome do Seu Site")
+
 # Seção de seleção de filtros
 pais = st.selectbox("Países", df['country'].unique())
 genero = st.selectbox("Gênero", df.sort_values(by='genre.1')['genre.1'].unique())
@@ -42,6 +45,5 @@ st.pyplot(fig)
 
 # Nova funcionalidade: Top 10 filmes mais bem avaliados
 st.write("Top 10 Filmes Mais Bem Avaliados")
-
 
 
