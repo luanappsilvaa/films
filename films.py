@@ -44,6 +44,7 @@ st.write("Top 10 Filmes Mais Bem Avaliados")
 # Filtrar os dados pelo país selecionado
 filmes_por_pais = df[df['country'] == pais]
 df[(df['country']==pais)&(df['language.1']==lingua)&(df['genre.1']==genero)]
+df=df.sort_values(by='five.star').head(10)
 
 
 # Contar a quantidade de filmes por categoria
@@ -61,7 +62,5 @@ ax.set_title('Quantidade de Filmes por Categoria')
 plt.xticks(rotation=45)
 st.pyplot(fig)
 
-# Nova funcionalidade: Top 10 filmes mais bem avaliados
-st.write("Top 10 Filmes Mais Bem Avaliados")
 
 
