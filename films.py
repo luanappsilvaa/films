@@ -18,8 +18,21 @@ def get_movie_info(movie_id):
     else:
         return None
 
+# CSS para a imagem de fundo
+page_bg_img = '''
+<style>
+.stApp {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Fvetores-premium%2Fsala-de-cinema-com-tela-vazia_6331364.htm&psig=AOvVaw1N_fYkHQgeyDjEDjdo3IGo&ust=1718719918044000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPjKrerV4YYDFQAAAAAdAAAAABAE ");
+  background-size: cover;
+}
+</style>
+'''
+
+# Inserir o CSS no Streamlit
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # Inserir o nome do site
-st.title("TOP10")
+st.title("TOP10FILMS")
 
 # Seção de seleção de filtros
 pais = st.selectbox("Países", df['country'].unique())
@@ -45,5 +58,3 @@ st.pyplot(fig)
 
 # Nova funcionalidade: Top 10 filmes mais bem avaliados
 st.write("Top 10 Filmes Mais Bem Avaliados")
-
-
