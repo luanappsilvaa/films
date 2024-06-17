@@ -38,9 +38,10 @@ pais = st.selectbox("Países", df['country'].unique())
 genero = st.selectbox("Gênero", df.sort_values(by='genre.1')['genre.1'].unique())
 lingua = st.selectbox("Língua", df.sort_values(by='language.1')['language.1'].unique())
 
-# Filtrar os dados pelo país selecionado
 # Nova funcionalidade: Top 10 filmes mais bem avaliados
 st.write("Top 10 Filmes Mais Bem Avaliados")
+
+# Filtrar os dados pelo país selecionado
 filmes_por_pais = df[df['country'] == pais]
 df[(df['country']==pais)&(df['language.1']==lingua)&(df['genre.1']==genero)]
 
