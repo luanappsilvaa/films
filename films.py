@@ -17,8 +17,6 @@ def get_movie_info(movie_id):
         return movie_data
     else:
         return None
-# Inserir o CSS no Streamlit
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Inserir o nome do site
 st.title("TOP10FILMS")
