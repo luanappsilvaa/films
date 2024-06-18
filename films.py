@@ -4,18 +4,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# fundo de tela do site 
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('https://github.com/luanappsilvaa/films/raw/main/sala%20de%20cinema.jpg');
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True)
-
 # Carregar o arquivo CSV
 df = pd.read_csv('ordenado.csv')
 top_10_ids = df['ID'].value_counts().head(10).index.tolist()
