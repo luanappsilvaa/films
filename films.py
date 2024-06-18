@@ -32,6 +32,7 @@ def get_movie_info(movie_id):
 
 # Inserir o nome do site
 st.title("TOP10FILMS")
+st.write("Vamos escolher o seu próximo filme !!")
 
 # Seção de seleção de filtros
 pais = st.selectbox("Países", df['country'].unique())
