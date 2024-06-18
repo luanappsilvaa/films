@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: url('https://raw.githubusercontent.com/JuliaFrazao/projeto-A2/main/cortina%20vermelha.jpg') no-repeat center center fixed;
+        background: url('https://github.com/luanappsilvaa/films/blob/main/sala%20de%20cinema.jpg') no-repeat center center fixed;
         background-size: cover;
     }
     </style>
