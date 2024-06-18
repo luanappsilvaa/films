@@ -4,6 +4,18 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+background_style = """
+    <style>
+    .stApp {
+        background: url('https://github.com/luanappsilvaa/films/blob/main/sala%20de%20cinema.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    </style>
+"""
+
+# Use st.markdown para aplicar o estilo de fundo ao seu aplicativo Streamlit
+st.markdown(background_style, unsafe_allow_html=True)
+
 # Carregar o arquivo CSV
 df = pd.read_csv('ordenado.csv')
 top_10_ids = df['ID'].value_counts().head(10).index.tolist()
