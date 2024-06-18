@@ -27,7 +27,7 @@ st.markdown(
         background-size: cover;
     }
     </style>
-    """,
+    """,)
     unsafe_allow_html=True
 # Inserir o CSS no Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
