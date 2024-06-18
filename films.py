@@ -20,10 +20,10 @@ def get_movie_info(movie_id):
 
 # CSS para a imagem de fundo
 page_bg_img = '''
-<style>
-body {
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO4vb-5AWBHqfj56RNFvPpCCUwSckUbvEiQ&s");
-background-size: cover;
+        <style>
+        .stApp {
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO4vb-5AWBHqfj56RNFvPpCCUwSckUbvEiQ&s")no-repeat center center fixed;
+        background-size: cover;
 }
 </style>
 '''
