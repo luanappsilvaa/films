@@ -19,14 +19,16 @@ def get_movie_info(movie_id):
         return None
 
 # CSS para a imagem de fundo
-page_bg_img = '''
-        <style>
-        .stApp {
-            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKO4vb-5AWBHqfj56RNFvPpCCUwSckUbvEiQ&s")no-repeat center center fixed;
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: url('') no-repeat center center fixed;
         background-size: cover;
-}
-</style>
-'''
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 # Inserir o CSS no Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
