@@ -4,6 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# fundo de tela do site 
 st.markdown(
     """
     <style>
