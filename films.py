@@ -17,25 +17,6 @@ def get_movie_info(movie_id):
         return movie_data
     else:
         return None
-
-# CSS para a imagem de fundo
-import streamlit as st
-
-# Defina o estilo de fundo usando HTML e CSS dentro de uma string HTML
-background_style = """
-    <style>
-    .stApp {
-        background: url('https://github.com/luanappsilvaa/films/blob/main/sala%20de%20cinema.jpg') no-repeat center center fixed;
-        background-size: cover;
-    }
-    </style>
-"""
-
-# Use st.markdown para aplicar o estilo de fundo ao seu aplicativo Streamlit
-st.markdown(background_style, unsafe_allow_html=True)
-
-# Aqui você pode continuar construindo o restante do seu aplicativo Streamlit normalmente
-
 # Inserir o CSS no Streamlit
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
